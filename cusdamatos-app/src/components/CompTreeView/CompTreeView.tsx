@@ -12,6 +12,8 @@ declare module "@mui/lab/TreeItem" {
     }
 }
 
+
+//TODO se sono sotto i 600 width metto un bottone pe chiudere il menu
 export default function CompTreeView() {
 
     const navigator = useNavigate()

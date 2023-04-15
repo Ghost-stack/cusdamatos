@@ -5,6 +5,7 @@ import CompNavbar from "./CompNavbar/CompNavbar";
 import CompMenu from "./CompMenu/CompMenu";
 import FightersPage from "../pages/FightersPage/FightersPage";
 import { Fragment } from "react";
+import CompFooter from "./CompFooter/CompFooter";
 
 export default function RootElement() {
 
@@ -19,17 +20,18 @@ export default function RootElement() {
                 <Box display="flex" flexDirection="column">
                     <CompNavbar />
                     <Box display="flex" flexDirection="row">
-                        <CompMenu />
-                        <Box display="flex" width="100%" height="100%" boxShadow={3}>
+                        { (window.screen.width >= 600) && <CompMenu />}
+                        <Box sx={{width:"100%", height:"100%"}} boxShadow={3}>
                             <Routes>
                                 {
                                     router.routes.map((elem : any) => {
-                                        return <Route path={elem.path} element={elem.element}></Route>
+                                        return <Route  path={elem.path} element={elem.element}></Route>
                                     })
                                 }
                             </Routes>
                         </Box>
                     </Box>
+                    <CompFooter />
                 </Box>
             </Fragment>
         </BrowserRouter>

@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import logo from "../../img/CusD'AmatosLogo.webp"
 
 export default function CompNavbar() {
+
     return (
         <Box 
             boxShadow={3}

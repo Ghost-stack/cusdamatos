@@ -5,15 +5,21 @@ import CompTreeView from "../CompTreeView/CompTreeView";
 export default function CompMenu() {
 
     return (
-        <Box>
+        <Box
+            sx = {{
+                backgroundColor : 'white',
+                p : 3
+            }}
+            boxShadow={3}
+        >
             <Box 
                 component="img"
                 sx={{m:3}}
-                height={150}
-                width={250}
+                height='auto'
+                maxWidth='50%'
                 src={gif}>
             </Box>
-            <CompTreeView />
+            <CompTreeView />            
         </Box>
     );
 }
