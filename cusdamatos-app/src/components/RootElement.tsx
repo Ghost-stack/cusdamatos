@@ -2,10 +2,8 @@ import { Box } from "@mui/material";
 import { BrowserRouter, Route, Routes, createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
 import CompNavbar from "./CompNavbar/CompNavbar";
-import CompMenu from "./CompMenu/CompMenu";
 import FightersPage from "../pages/FightersPage/FightersPage";
 import { Fragment } from "react";
-import CompFooter from "./CompFooter/CompFooter";
 
 export default function RootElement() {
 
@@ -20,7 +18,6 @@ export default function RootElement() {
                 <Box display="flex" flexDirection="column">
                     <CompNavbar />
                     <Box display="flex" flexDirection="row">
-                        { (window.screen.width >= 600) && <CompMenu />}
                         <Box sx={{width:"100%", height:"100%"}} boxShadow={3}>
                             <Routes>
                                 {
@@ -31,7 +28,6 @@ export default function RootElement() {
                             </Routes>
                         </Box>
                     </Box>
-                    <CompFooter />
                 </Box>
             </Fragment>
         </BrowserRouter>
